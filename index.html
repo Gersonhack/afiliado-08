@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Hack</title>
+          <linkhref="
+https://cdn.jsdelivr.net/npm/sweetalert2@11.10.7/dist/sweetalert2.min.css
+" rel="folha de estilo">
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+<script src="
+https://cdn.jsdelivr.net/npm/sweetalert2@11.10.7/dist/sweetalert2.all.min.js
+"></script>
+  <style>
+    * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background: url(https://i.postimg.cc/C5Y74Vhw/background.png) no-repeat center
+    center fixed;
+  background-size: cover;
+}
+.card {
+  height: 400px;
+  width: 320px;
+  background-color: rgba(255, 255, 255, 0.06);
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border-radius: 8px;
+  box-shadow: 20px 20px 22px rgba(0, 0, 0, 0.2);
+  font-family: "Poppins", sans-serif;
+}
+.card-img {
+  height: 120px;
+  width: 120px;
+  background-color: rgba(255, 255, 255, 0.06);
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  position: absolute;
+  margin: 30px auto 20px auto;
+  left: 0;
+  right: 0;
+  border-radius: 50%;
+}
+.card-img img {
+  height: 86%;
+  border-radius: 50%;
+  margin-left: 7%;
+  margin-top: 7%;
+}
+.desc {
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  top: 160px;
+}
+.primary-text {
+  color: #d5d5d5;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.7px;
+  margin: 5px 0;
+}
+
+.primary{
+  background: 
+  whitesmoke;
+  color: palevioletred;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.7px;
+  margin: 5px 0;
+}
+
+
+.secondary-text {
+  color: #c0c0c0;
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: 1px;
+  margin: 5px 0;
+}
+.details {
+  display: grid;
+  width: 100%;
+  height: 70px;
+  grid-template-columns: auto auto;
+  position: absolute;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.06);
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  border-radius: 0 0 8px 8px;
+  padding: 5px 0;
+}
+.details > div {
+  text-align: center;
+}
+.details > div:first-child {
+  border-right: 2px solid rgba(255, 255, 255, 0.08);
+}
+button {
+  background-color: rgba(255, 255, 255, 0.06);
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  position: absolute;
+  width: 80%;
+  left: 10%;
+  top: 240px;
+  border: none;
+  border-radius: 5px;
+  padding: 15px 0;
+}
+.coffe {
+  position: absolute;
+  left: 50px;
+  bottom: 50px;
+  transition: all 0.6s ease-in-out;
+}
+.coffe:hover {
+  transform: scale(1.2);
+}
+a{
+  color:#09DFFF;
+}
+h3{
+  background: #11C95D;
+  border-radius: 30px;
+  font-size:25px;
+}
+#sapp{
+  color:#11C95D;
+  font-size: 20px;
+}
+#im{
+  width: 300px;
+  height: 60px;
+}
+  </style>
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="card">
+   <div class="card-img">
+     <img src="https://i.postimg.cc/C1tYZmSC/62900943-avatar-man-cartoon-hacker-digital-criminal-wearing-gray-hoodie-and-black-glasses-using-a-la.jpg" alt="profile">
+   </div>
+   <div class="desc">
+     <h6 class="primary">Placard mozbets</h6>
+     <h6 class="secondary-text">Front-End-Developer</h6>
+          <h6 class="secondary-text">tens de criar nova conta ao entrar no site <a href="" onclick="hh()">porquê?</a></h6>
+           
+          
+   </div>
+   
+   <button class="primary-text" id="Page" onclick="pag()">continuar</button>
+   <a href="https://chat.whatsapp.com/ImLGiF5it1p6nEKgCyKqkM" id="sapp">grupo do whatsapp</a>
+   <div class="details">
+     <div class="rating">
+       <h6 class="primary-text">0</h6>
+       <h6 class="secondary-text">erros🚫</h6>
+     </div>
+     <div class="activity">
+       <h6 id="online-users" class="primary-text">🇲🇿</h6>
+       <h6 class="secondary-text">usuarios online</h6>
+     </div>
+   </div>
+ </div>
+ <div class="coffe">
+  <img  src="gr.png" id="im">
+ </div>
+<!-- partial -->
+  <script>
+    function gerarNumeroAleatorio() {
+      return Math.floor(Math.random() * 100) + 1;
+    }
+    
+    // Função para atualizar o número de usuários online
+    function atualizarUsuariosOnline() {
+      const numeroUsuarios = gerarNumeroAleatorio();
+      document.getElementById("online-users").textContent = numeroUsuarios;
+    }
+    
+    // Efeito de entrada
+    document.body.style.opacity = 0;
+    setTimeout(() => {
+      
+      document.body.style.opacity =1 ;
+      atualizarUsuariosOnline();
+    }, 1000);
+    
+    
+    
+    
+  </script>
+  <script>function hh(){
+    alert('Para garantir um melhor funcionamento do nosso robô de apostas, recomendamos que você crie uma conta na nossa casa de apostas parceira. Ao se registrar, você terá acesso a todas as funcionalidades do robô e poderá desfrutar de uma experiência completa de apostas online.')
+  }
+  function pag(){
+    alert('Mozbets...')
+    window.location.href="bot.html"
+  }
+  
+  </script>
+
+</body>
+</html>
